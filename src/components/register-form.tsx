@@ -1,3 +1,4 @@
+
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -127,7 +128,7 @@ export function RegisterForm({
                   />
                 </Field>
                 <Field>
-                  <Button onClick={(e) => handleRegister(e)} type="submit">
+                  <Button type="submit">
                     {registerConstant.signUp}
                   </Button>
                 </Field>
@@ -137,10 +138,7 @@ export function RegisterForm({
                 <Field className="grid grid-cols-1">
                   <Button
                     variant="outline"
-                    type="submit"
-                    onClick={(event: React.FormEvent<HTMLFormElement>) =>
-                      handleRegister(event)
-                    }
+                    type="button"
                   >
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                       <path

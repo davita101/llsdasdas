@@ -61,7 +61,7 @@ async function handleLogin(e: React.FormEvent<HTMLFormElement>) {
                     id="email"
                     type="email"
                     value={userInfo.email}
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                    onChange={(e) =>
                       setUserInfo({
                         ...userInfo,
                         email: e.target.value,
@@ -87,7 +87,7 @@ async function handleLogin(e: React.FormEvent<HTMLFormElement>) {
                   />
                 </Field>
                 <Field>
-                  <Button onClick={(e) => handleLogin(e)} type="submit">
+                  <Button type="submit">
                     {loginConstant.logIn}
                   </Button>
                 </Field>
