@@ -23,7 +23,7 @@ export function RegisterForm({
     password: "",
     confirmPassword: "",
   });
-  };
+
   return (
     <div className="flex items-center justify-center h-screen max-w-130 mx-auto ">
       <div className={cn("flex flex-col gap-6 w-full", className)} {...props}>
