@@ -23,31 +23,6 @@ export function RegisterForm({
     password: "",
     confirmPassword: "",
   });
-  // ! AUTH
-  const handleRegister = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // ⛔ stop browser refresh
-
-    if (userInfo.password !== userInfo.confirmPassword) {
-      alert("Passwords do not match");
-      return;
-    }
-    console.log("lomi");
-    await axios.post(
-      "http://localhost:3000/api/auth/signup",
-      {
-        name: userInfo.name,
-        email: userInfo.email,
-        password: userInfo.password,
-      },
-      {
-        withCredentials: true,
-        headers: {
-          "Content-Type": "application/json",
-        },
-      }
-    );
-    window.location.reload();
-    console.log(userInfo);
   };
   return (
     <div className="flex items-center justify-center h-screen max-w-130 mx-auto ">

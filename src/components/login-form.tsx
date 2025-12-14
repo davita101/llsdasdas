@@ -23,27 +23,7 @@ export function LoginForm({
     email: "",
     password: "",
   });
-  // ! AUTH
-async function handleLogin(e: React.FormEvent<HTMLFormElement>) {
-  e.preventDefault(); // ⛔ stop browser refresh
 
-  try {
-    await axios.post(
-      "http://localhost:3000/api/auth/login",
-      {
-        email: userInfo.email,
-        password: userInfo.password,
-      },
-      {
-        withCredentials: true,
-      }
-    );
-
-    window.location.reload(); // ✅ after success
-  } catch (error) {
-    console.error("Login failed", error);
-  }
-}
   return (
     <div className="flex items-center justify-center h-screen max-w-130  mx-auto ">
       <div className={cn("flex flex-col gap-6 w-full", className)} {...props}>
